@@ -11,23 +11,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital@0;1&family=Kdam+Thmor+Pro&family=Lato:wght@300;400&family=Open+Sans:ital,wght@0,300;1,300&family=Poppins:wght@600;700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-body text-white font-poppins pb-12">
+<body class="bg-body text-white font-poppins pb-10">
 
     <header class="py-6">
-        <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        <div class="container  bg-body z-20 fixed top-0 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full ">
             <div class="text-lg font-bold"> Orphée Letembe</div>
             <div class="hidden md:flex space-x-12 items-center">
                 <a href="#" class="text-selected-text">Accueil</a>
                 <a href="#work">Projets</a> 
                 <a href="#hire"><button class="px-6 py-2 bg-theme font-bold">Me contacter</button></a>        
             </div>
-            <div class="md:hidden">
-                <svg viewBox="0 0 100 80" width="40" height="40" >
+            <div id="scrolling_menu" class="fixed right-0 md:hidden ">
+                <svg viewBox="0 0 100 80" width="40" height="40">
                     <rect x="50" width="80" height="10" style="fill:rgb(255,255,255)"></rect>
                     <rect y="30" width="100" height="10" style="fill:rgb(255,255,255)"></rect>
                     <rect x="-50" y="60" width="100" height="10" style="fill:rgb(255,255,255)"></rect>
-                  </svg>
+                </svg>
             </div>
+            <ul id="menu" class="hidden bg-gray-500 left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center">
+                <li>
+                    <a class="hLink" href="#">Accueil</a>
+                </li>
+                <li>
+                    <a class="hLink" href="#work">Projets</a>
+                </li>
+                <li>
+                    <a class="hLink" href="#hire">Contacts</a>
+                </li>
+            </ul>
         </div>
     </header>
 
@@ -47,9 +58,9 @@
                 </div>
             </nav>
             <div class="flex flex-wrap lg:ml-20 gustify-center md:justify-start max-w-xl mt-0 md:my-36">
-                <h1 class="text-center font-bold text-5xl md:text-6xl lg:text-7xl md:text-left">Building<br> beautiful web experiences. </h1>
+                <h1 class="text-center font-bold text-5xl md:text-6xl lg:text-7xl md:text-left">Développeur Application<br>Python </h1>
                 <div class="w-full flex justify-center md:justify-start">
-                    <button class="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3">
+                    <a href="#work"> <button class="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3">
                         <div>
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.4375 11C14.4375 11.9117 14.0753 12.786 13.4307 13.4307C12.786 14.0753 11.9117 14.4375 11 14.4375C10.0883 14.4375 9.21398 14.0753 8.56932 13.4307C7.92466 12.786 7.5625 11.9117 7.5625 11C7.5625 10.0883 7.92466 9.21398 8.56932 8.56932C9.21398 7.92466 10.0883 7.5625 11 7.5625C11.9117 7.5625 12.786 7.92466 13.4307 8.56932C14.0753 9.21398 14.4375 10.0883 14.4375 11Z" fill="white"/>
@@ -57,37 +68,44 @@
                             </svg>
                         </div>
                         <span>Mes projets</span>
-                    </button>
+                    </button></a>
                 </div>
             </div>
-            <img src="img/man.png" alt="photo" class="mt-12 w-3/4  md:absolute -mt-6 md:mt-0 right-0 -z-1">
+            <img src="img/personal/man.png" alt="photo" class="mt-12 w-3/4  md:absolute -mt-6 md:mt-0 right-0 -z-1">
         </div>
     </div>
 
     <!-- My work -->
     <div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
         <section class="w-full">
-            <h2 id="work" class="secondary-title">My work</h2>
+            <h2 id="work" class="secondary-title">Projets</h2>
             <p class="section-paragraph">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                <img src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" class="w-full bg-nav h-36 lg:h-72 object-cover">
-                <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" class="w-full bg-nav h-36 lg:h-72 object-cover">
-                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-                <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-                <img src="https://images.unsplash.com/photo-1547119957-637f8679db1e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-                <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1336&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-                <img src="https://images.unsplash.com/photo-1603969072881-b0fc7f3d77d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80s" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-                <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full hidden md:block bg-nav h-36 lg:h-72 object-cover">
-                <img src="https://images.unsplash.com/photo-1545235617-7a424c1a60cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=880&q=80" class="w-full hidden md:block md:col-span-2 lg:col-span-1 bg-nav h-36 lg:h-72 object-cover">
+                <div class="rounded-lg">
+                    <a href="montessori.html"> <img class="w-full rounded-lg" src="./img/montessori/ac.png" alt=""></a>
+                    <p class="text-gray-400 text-sm p-2">Titre <br>Pellentesque habitant morbi tristique senectus.</p>
+                 </div>
+                 <div>
+                    <a href="#"> <img class="w-full rounded-lg" src="./img/p1.jfif" alt=""></a>
+                    <p class="text-gray-400 text-sm p-2">Titre <br>Pellentesque habitant morbi tristique senectus.</p>
+                 </div>
+                 <div>
+                    <a href="#"> <img class="w-full rounded-lg" src="./img/p1.jfif" alt=""></a>
+                    <p class="text-gray-400 text-sm p-2">Titre <br>Pellentesque habitant morbi tristique senectus.</p>
+                 </div>
+                 <div>
+                    <a href="#"> <img class="w-full rounded-lg" src="./img/p1.jfif" alt=""></a>
+                     <p class="text-gray-400 text-sm p-2">Titre <br>Pellentesque habitant morbi tristique senectus.</p>
+                 </div>  
             </div>
         </section>
     </div>
 
     <!-- Hire me -->
-    <div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+    <div class="container mt-60 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
         <section class="w-full">
-            <h2 id="hire" class="secondary-title">Hire me</h2>
+            <h2 id="hire" class="secondary-title">Contact</h2>
             <p class="section-paragraph">Feel free to to contact me any time, through any method below.</p>
 
             <div class="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-24">
@@ -125,6 +143,7 @@
     </div>
 
     <script src="main.js"></script>
+    <script src="menu.js"></script>
 
 
     
